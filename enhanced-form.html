@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML5 form assignment with lists, tables and media content">
+  <title>Enhanced HTML5 Forms - My Assignment</title>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>My Enhanced HTML5 Page</h1>
+    <nav>
+      <ul>
+        <li><a href="#content">Content Examples</a></li>
+        <li><a href="#data-table">Data Table</a></li>
+        <li><a href="#media-section">Media</a></li>
+        <li><a href="#contact-form">Contact Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-wrapper">
+    <main>
+      <!-- Lists Section -->
+      <section id="content">
+        <h2>Content Organization Examples</h2>
+        
+        <h3>My Favorite Web Technologies</h3>
+        <ol>
+          <li>HTML5 - for structure and semantics</li>
+          <li>CSS3 - for styling and layout</li>
+          <li>JavaScript - for interactivity</li>
+          <li>React - for building user interfaces</li>
+        </ol>
+
+        <h3>Essential Web Development Tools</h3>
+        <ul>
+          <li>Code Editor (VS Code, Sublime Text)</li>
+          <li>Browser Developer Tools</li>
+          <li>Version Control (Git)</li>
+          <li>Package Managers
+            <ul>
+              <li>npm for JavaScript</li>
+              <li>yarn as alternative</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>HTML5 Form Input Types</h3>
+        <dl>
+          <dt>Email</dt>
+          <dd>Validates email format automatically</dd>
+          <dt>Number</dt>
+          <dd>Only allows numeric input with optional min/max</dd>
+          <dt>Date</dt>
+          <dd>Provides calendar picker in most browsers</dd>
+          <dt>URL</dt>
+          <dd>Validates web address format</dd>
+        </dl>
+      </section>
+
+      <!-- Table Section -->
+      <section id="data-table">
+        <h2>Student Grade Summary</h2>
+        <table>
+          <caption>My Course Grades This Semester</caption>
+          <thead>
+            <tr>
+              <th scope="col">Course</th>
+              <th scope="col">Credits</th>
+              <th scope="col">Grade</th>
+              <th scope="col">GPA Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Web Development</td>
+              <td>3</td>
+              <td>A-</td>
+              <td>3.7</td>
+            </tr>
+            <tr>
+              <td>Database Systems</td>
+              <td>4</td>
+              <td>B+</td>
+              <td>3.3</td>
+            </tr>
+            <tr>
+              <td>Computer Networks</td>
+              <td>3</td>
+              <td>A</td>
+              <td>4.0</td>
+            </tr>
+            <tr>
+              <td>Software Engineering</td>
+              <td>4</td>
+              <td>B</td>
+              <td>3.0</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row">Total Credits:</th>
+              <td>14</td>
+              <td colspan="2">Average GPA: 3.5</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <!-- Media Section -->
+      <section id="media-section">
+        <h2>Media Content Examples</h2>
+        
+        <h3>Sample Image</h3>
+        <figure>
+          <img src="https://via.placeholder.com/400x200/0066cc/ffffff?text=HTML5+Demo" alt="HTML5 demonstration placeholder image" width="400" height="200">
+          <figcaption>Example of responsive image with proper alt text for accessibility</figcaption>
+        </figure>
+
+        <h3>Audio Example</h3>
+        <audio controls>
+          <source src="sample-audio.mp3" type="audio/mpeg">
+          <source src="sample-audio.ogg" type="audio/ogg">
+          Your browser does not support the audio element. You can <a href="sample-audio.mp3">download the audio file</a> instead.
+        </audio>
+        <p><em>Note: Audio file would be included in real project</em></p>
+
+        <h3>Video Example</h3>
+        <video controls width="400" height="225">
+          <source src="sample-video.mp4" type="video/mp4">
+          <source src="sample-video.webm" type="video/webm">
+          <track kind="subtitles" src="subtitles-en.vtt" srclang="en" label="English">
+          Your browser does not support HTML5 video. Here is a <a href="sample-video.mp4">link to the video</a> instead.
+        </video>
+        <p><em>Video would include actual content in production site</em></p>
+      </section>
+
+      <!-- Form Section -->
+      <section id="contact-form">
+        <h2>Student Registration Form</h2>
+        <p>Please fill out this form to register for our web development course.</p>
+        
+        <form action="#" method="post">
+          <!-- Personal Information -->
+          <fieldset>
+            <legend>Personal Information</legend>
+            
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="firstName" required minlength="2" maxlength="50" placeholder="Enter your first name" autocomplete="given-name">
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="lastName" required minlength="2" maxlength="50" placeholder="Enter your last name" autocomplete="family-name">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="your.email@example.com" autocomplete="email">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" placeholder="254712345678" autocomplete="tel">
+
+            <label for="birth-date">Date of Birth:</label>
+            <input type="date" id="birth-date" name="birthDate" min="1950-01-01" max="2010-12-31" required>
+          </fieldset>
+
+          <!-- Academic Information -->
+          <fieldset>
+            <legend>Academic Background</legend>
+            
+            <label for="student-id">Student ID:</label>
+            <input type="text" id="student-id" name="studentId" pattern="[A-Z]{2}[0-9]{6}" placeholder="AB123456" title="Format: 2 letters followed by 6 numbers" required>
+
+            <label for="current-level">Current Academic Level:</label>
+            <select id="current-level" name="currentLevel" required>
+              <option value="">-- Select Level --</option>
+              <option value="freshman">Freshman</option>
+              <option value="sophomore">Sophomore</option>
+              <option value="junior">Junior</option>
+              <option value="senior">Senior</option>
+              <option value="graduate">Graduate</option>
+            </select>
+
+            <label for="gpa">Current GPA:</label>
+            <input type="number" id="gpa" name="gpa" min="0.0" max="4.0" step="0.1" placeholder="3.5">
+
+            <label for="major">Field of Study:</label>
+            <input type="text" id="major" name="major" list="majors" placeholder="Computer Science" required>
+            <datalist id="majors">
+              <option value="Computer Science">
+              <option value="Information Technology">
+              <option value="Software Engineering">
+              <option value="Web Development">
+              <option value="Data Science">
+            </datalist>
+          </fieldset>
+
+          <!-- Course Preferences -->
+          <fieldset>
+            <legend>Course Preferences</legend>
+            
+            <p>Which programming languages interest you? (Select all that apply)</p>
+            <input type="checkbox" id="html-css" name="languages" value="html-css">
+            <label for="html-css">HTML/CSS</label>
+
+            <input type="checkbox" id="javascript" name="languages" value="javascript">
+            <label for="javascript">JavaScript</label>
+
+            <input type="checkbox" id="python" name="languages" value="python">
+            <label for="python">Python</label>
+
+            <input type="checkbox" id="java" name="languages" value="java">
+            <label for="java">Java</label>
+
+            <p>Preferred class schedule:</p>
+            <input type="radio" id="morning" name="schedule" value="morning" required>
+            <label for="morning">Morning (8AM - 12PM)</label>
+
+            <input type="radio" id="afternoon" name="schedule" value="afternoon">
+            <label for="afternoon">Afternoon (1PM - 5PM)</label>
+
+            <input type="radio" id="evening" name="schedule" value="evening">
+            <label for="evening">Evening (6PM - 9PM)</label>
+
+            <label for="experience-level">Programming Experience (1-10):</label>
+            <input type="range" id="experience-level" name="experienceLevel" min="1" max="10" value="5" oninput="this.nextElementSibling.value = this.value">
+            <output>5</output>
+          </fieldset>
+
+          <!-- Additional Information -->
+          <fieldset>
+            <legend>Additional Information</legend>
+            
+            <label for="portfolio-url">Portfolio Website (optional):</label>
+            <input type="url" id="portfolio-url" name="portfolioUrl" placeholder="https://yourportfolio.com">
+
+            <label for="motivation">Why do you want to take this course?</label>
+            <textarea id="motivation" name="motivation" rows="4" cols="50" minlength="50" maxlength="500" placeholder="Tell us about your goals and motivation..." required></textarea>
+
+            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+            <label for="newsletter">Subscribe to course updates and newsletters</label>
+
+            <input type="checkbox" id="terms" name="terms" value="agreed" required>
+            <label for="terms">I agree to the terms and conditions *</label>
+          </fieldset>
+
+          <!-- Hidden and Readonly Fields -->
+          <input type="hidden" name="formVersion" value="2.1">
+          
+          <label for="submission-date">Form Submission Date:</label>
+          <input type="text" id="submission-date" name="submissionDate" readonly value="2025-09-02">
+
+          <!-- Submit Button -->
+          <button type="submit">Register for Course</button>
+          <button type="reset">Clear Form</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Web Development Project.</p>
+  </footer>
+
+</body>
+</html>
